@@ -8,8 +8,9 @@ disable-model-invocation: true
 
 Pair programming where the deliverable is the master prompt: the one
 markdown document per effort that a fresh coding agent executes from a
-clean worktree. It lives at `docs/plans/<effort>.md` unless the user says
-otherwise.
+clean worktree. The session itself runs in the main worktree, but the
+master prompt is written into the worktree the user provisioned for this
+session, at `docs/plans/<effort>.md` unless the user says otherwise.
 
 ## The loop
 
