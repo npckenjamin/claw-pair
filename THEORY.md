@@ -55,25 +55,33 @@ parallelism has no coordination cost. Nothing needs merging, syncing, or
 cherry-picking between trees — the prompt and the skills are the only
 shared state, and they live outside every tree.
 
+But parallelism only buys motion, and speed that counts is directed:
+intent that drives the product toward something that actually solves,
+versus just motion. Good intent takes theory in my head, and reviewing
+with the claw pair is how the theory of the program gets into my head
+without me having written the code. This is the Naur point: modification
+cost is a function of the match between the theory of the world and the
+theory of the program, and the human always holds more theory of the
+world than the model, because the model's inputs are text and text is
+fundamentally lossy. The review conversation is where the two theories
+get matched.
+
 ## Flaw 3: non-determinism
 
-Non-determinism means the output must be checked. The concept stacks
-three checks, cheapest first:
+Non-determinism means the output must be checked — and there are two
+different things to check: that the code works, and that the code is
+good.
 
-- **Feedback loops.** A clanka that can validate its work against
-  reality catches its own misses before anyone else spends attention on
-  them. A claim without an artifact is unchecked.
-- **LLM as judge.** LLMs are a little inaccurate; throwing another LLM
-  at the output pushes that inaccuracy down to even more negligible
-  values.
-- **Review with the claw pair.** The residue lands on me — but not
-  alone, and not cold. Reviewing with the claw pair is also how the
-  theory of the program gets into my head without me having written the
-  code. This is the Naur point: modification cost is a function of the
-  match between the theory of the world and the theory of the program,
-  and the human always holds more theory of the world than the model,
-  because the model's inputs are text and text is fundamentally lossy.
-  The review conversation is where the two theories get matched.
+Feedback loops handle the first. A clanka that can validate its work
+against reality can at least produce code that works. A claim without an
+artifact is unchecked.
+
+Working code is not enough — it also needs to be good code: tasteful,
+simple, maintainable. The LLM judge handles that. Models tunnel-vision
+when they're coding; the judge is the extra lens outside the tunnel. It
+provides the non-functional feedback loop — the taste feedback loop —
+since it is more closely connected to me, the human, than a clanka
+mid-implementation is.
 
 Non-determinism also has an upside the concept exploits: a rerun is a
 fresh sample. When a run goes wrong, the fix is a better prompt or a
