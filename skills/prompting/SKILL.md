@@ -1,0 +1,54 @@
+---
+name: prompting
+description: Pair-write an effort's master prompt with Kenjamin — riff, revise the one document, stop for the clanka run, riff on its report.
+disable-model-invocation: true
+---
+
+# Prompting
+
+Pair programming where the deliverable is the master prompt: the one
+markdown document per effort that a fresh clanka executes from a clean
+worktree. It lives at `docs/plans/<effort>.md` unless Kenjamin says
+otherwise, named for the effort — no dates, no take letters: the
+accepted run's single commit includes the prompt, so git history
+attributes each prompt to the change it drove.
+
+The master prompt and the skills are the only things this session
+changes — never product code.
+
+## The loop
+
+1. **Riff** — discuss the effort until its decisions are settled,
+   grounded in the actual code. Read the codebase to invalidate intent
+   here, in conversation, where it is cheap — before it costs a run.
+2. **Revise the master prompt** — draft in chat first if the shape is
+   still contested, otherwise write it. The one document absorbs every
+   settled decision; it opens with its pointer line —
+   `Execute this per ~/.agents/skills/pair-implementing/SKILL.md.` —
+   and every line survives the register test below.
+3. **Stop** — end the turn. Kenjamin sends the master prompt to a fresh
+   clanka in a fresh worktree. Do not draft ahead: the run's report is
+   input to the next revision.
+4. **Riff on the run** — review the report and the output together.
+   Findings become edits to the master prompt or to the skills — never
+   to the tree, which gets nuked. Back to 1 until a run is accepted.
+
+## Prompt register
+
+The clanka is intelligent and reads the codebase itself. A line earns
+its place only as one of these:
+
+- **Decision** — a choice already made in our heads, invisible in the
+  code. Sharpest case: guardrails where the clanka's intelligence works
+  *against* us ("leave the unreachable moments code; do not clean it
+  up").
+- **Requirement** — a constraint stated as an outcome ("must cover the
+  outside pane"), never the mechanism; the clanka discovers the how.
+- **Evaluation instruction** — the observable checks by which the run is
+  judged, each written so an artifact can back it. The enforcement —
+  artifact rule, completion gating, validation entry point, report
+  shape — lives in the pair-implementing skill, which the pointer line
+  already invokes; never restate it in the prompt.
+
+Everything else — discoverable codebase facts, rename tables, variable
+naming, build mechanics the repo docs already carry — is noise; cut it.

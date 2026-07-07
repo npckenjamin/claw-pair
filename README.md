@@ -55,8 +55,8 @@ The prompt and the skills are the source of truth — never the tree.
 
 Skills live in [`skills`](skills), one folder per skill with a `SKILL.md`:
 
-- [`pair-prompting`](skills/pair-prompting) — the claw-pair side: how to
-  pair-write prompt files and what earns a line in one (decisions,
+- [`prompting`](skills/prompting) — the claw-pair side: how to pair-write
+  an effort's master prompt and what earns a line in it (decisions,
   requirements, evaluation instructions).
 - [`pair-implementing`](skills/pair-implementing) — the implementer side:
   the execution contract for a pair-written prompt (decisions are settled,
