@@ -1,49 +1,55 @@
 ---
-name: pair-implementing
-description: Execution contract for pair-written prompt files — read the registers, gate on artifact-backed checks, report the run.
+name: implementing
+description: Execution contract for a master prompt — read the registers, gate on artifact-backed checks, assemble the evaluation packet.
 disable-model-invocation: true
 ---
 
-# Pair Implementing
+# Implementing
 
-The contract for executing a prompt file from `docs/plans/`. The file was
-pair-written and every line in it is deliberate; this is how you hold up
-your side.
+The contract for executing a master prompt from `docs/plans/`. The
+prompt was pair-written and every line in it is deliberate; this is how
+you hold up your side.
 
 ## Reading the file
 
 - **Decisions** are settled. Do not re-litigate them or clean up around
   them, even where your judgment disagrees — especially there.
-- **Requirements** are outcomes. The mechanism is yours to discover in the
-  codebase.
+- **Requirements** are outcomes. The mechanism is yours to discover in
+  the codebase.
 - A **premise break** — the file asserts something the code or runtime
-  disproves — does not void the requirement: pursue the stated outcome by
-  whatever mechanism is actually true, and report the break.
+  disproves — does not void the requirement: pursue the stated outcome
+  by whatever mechanism is actually true, and report the break.
 
 ## Checks gate completion
 
-Prove the change per the repo's validation skill
-(`.agents/skills/validating-ios/SKILL.md` for iOS changes). Then:
+Prove the change per the repo's validation skill, if it has one. Then:
 
-- Every check in the file needs its artifact — screenshot, UI snapshot,
-  command output. A claim without an artifact is unchecked.
+- Every check in the prompt's evaluation packet needs its artifact —
+  screenshot, UI snapshot, command output. A claim without an artifact
+  is unchecked.
 - A blocked check is a problem to solve (provision, seed, sign in) or a
   blocker to surface — never a caveat under a done-claim.
 
-## The report
+## The evaluation packet
 
-Your final report is the input to the next prompt, not a summary. It
-carries:
+The worktree may be nuked after review; the packet and the report are
+the run's only survivors.
 
-- each check: outcome and artifact path;
-- every discovery, deviation, and premise break;
-- every side effect beyond the diff — data seeded, deployments touched,
-  helpers shipped.
+- **The deck** — an HTML slide deck at `.packet/index.html`, untracked,
+  one slide per check: the check, its outcome, its evidence. The review
+  walks through it.
+- **The report** — your final message. It carries every discovery,
+  deviation, premise break, and side effect beyond the diff — data
+  seeded, deployments touched, helpers shipped. Text, because it gets
+  quoted into the next prompt revision. An omitted discovery is not
+  lost to a future run; it is just lost.
 
-Repo brevity rules are for conversation; they do not apply here. An
-omitted discovery costs a future run.
+Repo brevity rules are for conversation; they do not apply to the
+report.
 
 ## The worktree
 
-- Files already dirty when you arrived stay untouched.
-- Commit only when asked; the commit includes the prompt file that drove it.
+- The run ends as a single commit holding the entire change and the
+  master prompt that drove it.
+- Skill-file fixes discovered mid-run may be written but never
+  committed — they ride the report back.
