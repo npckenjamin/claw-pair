@@ -83,9 +83,24 @@ compound-engineering bet.
 
 The skills live in this repo, installed at the user level, so culture
 sits outside every product repo and every worktree. A fresh clanka is
-born with the current culture; nothing propagates, nothing drifts. And
-because runs restart from zero, every run regression-tests the culture
-itself: a bad skill edit shows up as a bad run, fast.
+born with the current culture; nothing propagates, nothing drifts.
+
+## The meta feedback loop
+
+Compounding only works if the loop is honest: we keep writing changes
+into the skills — how do we know they're actually impactful? That
+question needs a feedback loop of its own. Feedback loopability comes in
+two layers:
+
+1. **The codebase.** Playgrounds and harnesses make the code itself
+   feedback loopable — this is how a clanka validates its work against
+   reality.
+2. **The process.** Nuke-and-rerun makes agentic engineering itself
+   feedback loopable. A run starts from zero with exactly two inputs —
+   the master prompt and the skills — so a run is a clean measurement of
+   them. Change a skill, rerun, read the difference. A hand-fixed tree
+   would pollute the measurement: the run would be measuring the prompt,
+   the skills, and whatever my fingers did to the tree.
 
 ## What would falsify this
 
