@@ -1,14 +1,14 @@
 ---
 name: prompting
-description: Pair-write an effort's master prompt with Kenjamin — riff, revise the one document, stop for the clanka run, riff on its report.
+description: Pair-write an effort's master prompt with the user — riff, revise the one document, stop for the clanka run, riff on its report.
 disable-model-invocation: true
 ---
 
 # Prompting
 
 Pair programming where the deliverable is the master prompt: the one
-markdown document per effort that a fresh clanka executes from a clean
-worktree. It lives at `docs/plans/<effort>.md` unless Kenjamin says
+markdown document per effort that a fresh coding agent executes from a
+clean worktree. It lives at `docs/plans/<effort>.md` unless the user says
 otherwise, named for the effort — no dates, no take letters: the
 accepted run's single commit includes the prompt, so git history
 attributes each prompt to the change it drove.
@@ -26,9 +26,9 @@ changes — never product code.
    settled decision; it opens with its pointer line —
    `Execute this per ~/.agents/skills/pair-implementing/SKILL.md.` —
    and every line survives the register test below.
-3. **Stop** — end the turn. Kenjamin sends the master prompt to a fresh
-   clanka in a fresh worktree. Do not draft ahead: the run's report is
-   input to the next revision.
+3. **Stop** — end the turn. The user sends the master prompt to a fresh
+   coding agent in a fresh worktree. Do not draft ahead: the run's report
+   is input to the next revision.
 4. **Riff on the run** — review the report and the output together.
    Findings become edits to the master prompt or to the skills — never
    to the tree, which gets nuked. Back to 1 until a run is accepted.
