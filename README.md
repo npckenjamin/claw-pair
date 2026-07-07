@@ -58,9 +58,9 @@ Skills live in [`skills`](skills), one folder per skill with a `SKILL.md`:
 - [`prompting`](skills/prompting) — the claw-pair side: how to pair-write
   an effort's master prompt and what earns a line in it (decisions,
   requirements, evaluation instructions).
-- [`pair-implementing`](skills/pair-implementing) — the implementer side:
-  the execution contract for a pair-written prompt (decisions are settled,
-  checks need artifacts, the report shape).
+- [`implementing`](skills/implementing) — the implementer side: the
+  execution contract for a master prompt (decisions are settled, checks
+  need artifacts, the evaluation packet).
 - [`writing-great-skills`](skills/writing-great-skills) — how the culture
   itself gets written: the vocabulary and principles that make a skill
   predictable, read before editing any skill here.
