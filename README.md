@@ -16,11 +16,24 @@ Code quickly and confidently, despite LLMs being LLMs:
 
 ## Patterns
 
-- LLM as judge
-- Worktree parallelism
-- Compound engineering
+- LLM as judge: put a model on the review side too — a model checks a
+  model's work before I spend my own attention on it.
+- Worktree parallelism: inference is slow, so many clankas run at once,
+  each in its own disposable worktree. The tree is never the source of
+  truth, so nuking one costs nothing.
+- Compound engineering: every run's learnings get encoded back into the
+  skills, so the next run starts smarter. Failed runs are the test suite
+  for the culture.
 - Programming as theory building
-- LLM validation loops
+  ([Naur](https://pages.cs.wisc.edu/~remzi/Naur.pdf)): programming is not
+  the production of a program — it is building a theory of how world
+  affairs are handled by the program. The schwerpunkt is modification
+  cost: it is a function of the match between the theory of the world and
+  the theory of the program. The human will always have more theory of
+  the world than the LLM — its inputs are text, and text is fundamentally
+  lossy — so you either give the LLM theory or keep the human in the loop.
+- LLM validation loops: a claim without an artifact is unchecked. Clankas
+  prove their work with artifact-backed checks before claiming done.
 
 ## Concept
 
