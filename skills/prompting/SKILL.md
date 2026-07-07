@@ -11,9 +11,6 @@ markdown document per effort that a fresh coding agent executes from a
 clean worktree. It lives at `docs/plans/<effort>.md` unless the user says
 otherwise.
 
-The master prompt and the skills are the only things this session
-changes — never product code.
-
 ## The loop
 
 1. **Riff** — discuss the effort until its decisions are settled,
