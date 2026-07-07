@@ -1,15 +1,38 @@
 # Claw Pair
 
-Kenjamin's claw pair culture: the skills that define how a thought-partner
-LLM (the claw pair) and implementation agents work together, kept in one
-place instead of scattered across product repos.
+Kenjamin's claw pair culture (a play on *au pair*): the skills that define
+how a thought-partner LLM and implementation agents work together, kept in
+one place instead of scattered across product repos.
 
-A claw pair (a play on *au pair*) is a long-lived session on the main
-worktree that helps parse intent into good prompts, review what
-implementation agents produce, and compound learnings back into these
-skills. Implementation runs are disposable: one master prompt per effort,
-sent to a fresh agent each time; when the output isn't right, the worktree
-is nuked, the prompt and skills are revised, and the run repeats from zero.
+## Job to be done
+
+Code quickly and confidently, despite LLMs being LLMs:
+
+- they need to be prompted, and prompting skills are poor (and intent
+  misguided);
+- they run slowly, so they need to be parallelized;
+- they are non-deterministic, so their code needs to be reviewed — you
+  can't completely trust-fall on the model.
+
+## Patterns
+
+- LLM as judge
+- Worktree parallelism
+- Compound engineering
+- Programming as theory building
+- LLM validation loops
+
+## Concept
+
+The claw pair: a thought-partner LLM that works with me to
+
+- provide early validation for my intent and parse it into good prompts;
+- help me understand and review the code the model writes;
+- help me compound the process by encoding learnings from the field.
+
+Implementation runs are disposable: one master prompt per effort, sent to
+a fresh agent each time. When the output isn't right, the worktree is
+nuked, the prompt and skills are revised, and the run repeats from zero.
 The prompt and the skills are the source of truth — never the tree.
 
 ## Skills
@@ -28,9 +51,10 @@ Skills live in [`skills`](skills), one folder per skill with a `SKILL.md`:
 
 ## Install
 
-Symlinks every skill into `~/.claude/skills/` so Claude Code picks them up
-in every project and worktree on this machine:
+Installs every skill user-level via [skills.sh](https://skills.sh):
 
 ```sh
-mise run install
+npx skills add npckenjamin/claw-pair -g
 ```
+
+After the repo changes, refresh with `npx skills update -g`.
