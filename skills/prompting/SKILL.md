@@ -41,12 +41,10 @@ earns its place only as one of these:
 - **Requirement** — a constraint stated as an outcome ("must cover the
   outside pane"), never the mechanism; the agent discovers the how.
 - **Evaluation packet** — the observable checks by which the run is
-  judged, each written so an artifact can back it. The agent evaluates
-  its own work against them, then assembles the evidence into a packet —
-  an HTML slide deck — that the review works from. The enforcement —
-  artifact rule, completion gating, validation entry point, packet
-  shape — lives in the implementing skill, which the pointer line
-  already invokes; never restate it in the prompt.
+  judged, each written so an artifact can back it. The enforcement —
+  artifact rule, completion gating, validation entry point, deck and
+  report shape — lives in the implementing skill, which the pointer
+  line already invokes; never restate it in the prompt.
 
 Everything else — discoverable codebase facts, rename tables, variable
 naming, build mechanics the repo docs already carry — is noise; cut it.
