@@ -22,6 +22,9 @@ Skills live in [`skills`](skills), one folder per skill with a `SKILL.md`:
 - [`pair-implementing`](skills/pair-implementing) — the implementer side:
   the execution contract for a pair-written prompt (decisions are settled,
   checks need artifacts, the report shape).
+- [`writing-great-skills`](skills/writing-great-skills) — how the culture
+  itself gets written: the vocabulary and principles that make a skill
+  predictable, read before editing any skill here.
 
 ## Install
 
