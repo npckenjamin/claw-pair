@@ -6,9 +6,10 @@ disable-model-invocation: true
 
 # Implementing
 
-The contract for executing a master prompt from `docs/plans/`. The
-prompt was pair-written and every line in it is deliberate; this is how
-you hold up your side.
+The contract for executing a master prompt. The user provides it with
+the invocation — if they didn't, ask for one. The prompt was
+pair-written and every line in it is deliberate; this is how you hold
+up your side.
 
 ## Reading the file
 
