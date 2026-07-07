@@ -32,7 +32,8 @@ Code quickly and confidently, despite LLMs being LLMs:
   cost: it is a function of the match between the theory of the world and
   the theory of the program. The human will always have more theory of
   the world than the LLM — its inputs are text, and text is fundamentally
-  lossy — so you either give the LLM theory or keep the human in the loop.
+  lossy — so you either give the LLM theory (google world models) or keep
+  the human in the loop.
 - LLM validation loops: a claim without an artifact is unchecked. Clankas
   prove their work with artifact-backed checks before claiming done.
 
