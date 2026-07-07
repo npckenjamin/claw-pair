@@ -1,21 +1,17 @@
 # Theory
 
-Why we believe the claw pair concept solves the job to be done.
+Why we believe the claw pair concept solves the job to be done (terms —
+claw pair, clanka, master prompt — live in the README).
 
 ## The job, restated
 
 Code quickly and confidently. LLMs are the fastest way to produce code,
 but three flaws stand between a raw model and confidence:
 
-1. they need to be prompted, and intent is figured out during the
-   process of coding — I don't fully know what I want until I see
-   something;
+1. they need to be prompted to carry out my intent — and neither the
+   prompt nor the intent starts out right;
 2. they run slowly;
 3. they are non-deterministic — their code needs to be reviewed.
-
-Each flaw gets its own argument below. The claim is that the claw pair
-concept doesn't just patch each flaw; the same few mechanisms answer all
-three at once.
 
 ## Flaw 1: prompting
 
@@ -69,11 +65,6 @@ provides the non-functional feedback loop — the taste feedback loop —
 since it is more closely connected to me, the human, than a clanka
 mid-implementation is.
 
-Non-determinism also has an upside the concept exploits: a rerun is a
-fresh sample. When a run goes wrong, the fix is a better prompt or a
-better skill, and the rerun tests that fix end-to-end from zero — not
-just the patch in isolation.
-
 ## Compounding
 
 Every mechanism above produces learnings: a prompt phrasing that
@@ -109,7 +100,7 @@ The concept is a bet, and it loses if:
 - runs get expensive enough (time or money) that nuking feels wasteful
   and hand-fixing creeps back in;
 - the master prompt grows past what a clanka can faithfully hold, and
-  discoveries start falling out the bottom;
+  parts of my intent start falling out the bottom;
 - the claw pair's theory doesn't persist — if each session starts cold,
   the human is the only memory, and the compounding claim weakens.
 
