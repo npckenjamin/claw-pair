@@ -55,17 +55,6 @@ parallelism has no coordination cost. Nothing needs merging, syncing, or
 cherry-picking between trees — the prompt and the skills are the only
 shared state, and they live outside every tree.
 
-But parallelism only buys motion, and speed that counts is directed:
-intent that drives the product toward something that actually solves,
-versus just motion. Good intent takes theory in my head, and reviewing
-with the claw pair is how the theory of the program gets into my head
-without me having written the code. This is the Naur point: modification
-cost is a function of the match between the theory of the world and the
-theory of the program, and the human always holds more theory of the
-world than the model, because the model's inputs are text and text is
-fundamentally lossy. The review conversation is where the two theories
-get matched.
-
 ## Flaw 3: non-determinism
 
 Non-determinism means the output must be checked — and there are two
