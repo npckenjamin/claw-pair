@@ -1,8 +1,7 @@
 # Theory
 
-Why we believe the claw pair concept solves the job to be done, and how
-it runs in practice. The README states the concept; this is the argument
-for it and the mechanics of it.
+Why we believe the claw pair concept solves the job to be done. The
+README states the concept; this is the argument for it.
 
 ## The job, restated
 
@@ -15,36 +14,9 @@ but three flaws stand between a raw model and confidence:
 2. they run slowly;
 3. they are non-deterministic — I can't trust-fall on them.
 
-The claim is that the claw pair concept doesn't just patch each flaw;
-the same few mechanisms answer all three at once.
-
-## How it runs
-
-One effort, one loop:
-
-1. **Riff.** The claw pair session lives on the main worktree. We talk
-   until the next piece of intent is settled, and it lands in the
-   master prompt — one document per effort that carries every decision,
-   requirement, and evaluation instruction made so far.
-2. **Run.** The master prompt goes to a fresh clanka in its own
-   worktree. Several clankas can run at once; none of them share
-   anything but the prompt and the skills.
-3. **Judge.** The run's output gets checked cheapest-first: the
-   clanka's own artifact-backed checks, then an LLM judge over the
-   diff, then the two of us reviewing side by side.
-4. **Revise.** Whatever the review discovers becomes an edit to the
-   master prompt or to a skill — never to the tree. Then the worktree
-   is nuked and the loop goes back to 2.
-5. **Accept.** When a run is right, that tree ships. Learnings that
-   outlive the effort get encoded into the skills in this repo.
-
-The roles are held by two contracts: `pair-prompting` governs how the
-claw pair and I write the master prompt, `pair-implementing` governs how
-a clanka executes it. The skills install at the user level
-(`npx skills add npckenjamin/claw-pair -g`), so every fresh worktree and
-every fresh clanka is born with the current culture — nothing propagates
-between trees, and `npx skills update -g` pulls the latest after the
-repo changes.
+Each flaw gets its own argument below. The claim is that the claw pair
+concept doesn't just patch each flaw; the same few mechanisms answer all
+three at once.
 
 ## Flaw 1: prompting, and emergent intent
 
@@ -59,20 +31,24 @@ decays: per Naur, program text modified without the theory rots, and a
 patched tree is exactly that. Storing it in the master prompt puts the
 discovery where it regenerates: the next run is born already knowing it.
 
-This is why step 4 is absolute — the moment I hand-fix a tree, the
-prompt stops being the full record of intent, and the next run silently
-loses what the fix knew.
+This is why the master prompt is one document that absorbs every
+discovery, and why the worktree gets nuked instead of fixed. The
+discipline is absolute — the moment I hand-fix a tree, the prompt stops
+being the full record of intent, and the next run silently loses what
+the fix knew.
 
-The claw pair's role is early validation: intent gets pressure-tested in
-the riff before it costs a run. Riffing is cheap; runs are less cheap;
-shipped misunderstandings are expensive. The claw pair moves the
-discovery of "that's not what I meant" as far upstream as it can go.
+The claw pair's role in this loop is early validation: intent gets
+pressure-tested in conversation before it costs a run. Riffing is cheap;
+runs are less cheap; shipped misunderstandings are expensive. The claw
+pair moves the discovery of "that's not what I meant" as far upstream as
+it can go.
 
 ## Flaw 2: slow inference
 
 Inference speed is not something we control, so the answer is to stop
 waiting on it. Clankas run in parallel worktrees; my time goes into the
-riff, which overlaps with the runs instead of blocking on them.
+claw pair conversation, which overlaps with the runs instead of blocking
+on them.
 
 Nuke-and-rerun leans on the same fact from the other side: because the
 tree is never the source of truth, a worktree is free to destroy, and
@@ -82,8 +58,8 @@ shared state, and they live outside every tree.
 
 ## Flaw 3: non-determinism
 
-Non-determinism means the output must be checked. Step 3 stacks three
-checks, cheapest first:
+Non-determinism means the output must be checked. The concept stacks
+three checks, cheapest first:
 
 - **Feedback loops.** A clanka that can validate its work against
   reality catches its own misses before anyone else spends attention on
@@ -107,13 +83,16 @@ just the patch in isolation.
 
 ## Compounding
 
-Every pass through the loop produces learnings: a prompt phrasing that
+Every mechanism above produces learnings: a prompt phrasing that
 worked, a check clankas keep skipping, a register rule. Encoding them
 into the skills is what makes run N+1 cheaper than run N — the
 compound-engineering bet.
 
-And because runs restart from zero, every run regression-tests the
-culture itself: a bad skill edit shows up as a bad run, fast.
+The skills live in this repo, installed at the user level, so culture
+sits outside every product repo and every worktree. A fresh clanka is
+born with the current culture; nothing propagates, nothing drifts. And
+because runs restart from zero, every run regression-tests the culture
+itself: a bad skill edit shows up as a bad run, fast.
 
 ## What would falsify this
 
