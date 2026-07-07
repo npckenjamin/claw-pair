@@ -1,6 +1,6 @@
 ---
 name: prompting
-description: Pair-write an effort's master prompt with the user — riff, revise the one document, stop for the clanka run, riff on its report.
+description: Pair-write an effort's master prompt with the user — riff, revise the one document, stop for the agent run, riff on its report.
 disable-model-invocation: true
 ---
 
@@ -9,8 +9,8 @@ disable-model-invocation: true
 Pair programming where the deliverable is the master prompt: the one
 markdown document per effort that a fresh coding agent executes from a
 clean worktree. The session itself runs in the main worktree, but the
-master prompt is written into the worktree the user provisioned for this
-session, at `docs/plans/<effort>.md` unless the user says otherwise.
+master prompt is written into the worktree the user provisioned for the
+effort, at `docs/plans/<effort>.md` unless the user says otherwise.
 
 ## The loop
 
@@ -31,20 +31,19 @@ session, at `docs/plans/<effort>.md` unless the user says otherwise.
 
 ## Prompt register
 
-The clanka is intelligent and reads the codebase itself. A line earns
-its place only as one of these:
+The coding agent is intelligent and reads the codebase itself. A line
+earns its place only as one of these:
 
 - **Decision** — a choice already made in our heads, invisible in the
-  code. Sharpest case: guardrails where the clanka's intelligence works
+  code. Sharpest case: guardrails where the agent's intelligence works
   *against* us ("leave the unreachable moments code; do not clean it
   up").
 - **Requirement** — a constraint stated as an outcome ("must cover the
-  outside pane"), never the mechanism; the clanka discovers the how.
+  outside pane"), never the mechanism; the agent discovers the how.
 - **Evaluation packet** — the observable checks by which the run is
-  judged, told to the clanka upfront, each written so an artifact can
-  back it. The clanka evaluates its own work against them, then
-  assembles the evidence into a packet — an HTML slide deck — that the
-  review works from. The enforcement — artifact rule, completion
+  judged, each written so an artifact can back it. The agent evaluates
+  its own work against them, then assembles the evidence into a packet —
+  an HTML slide deck — that the review works from. The enforcement — artifact rule, completion
   gating, validation entry point, packet shape — lives in the
   pair-implementing skill, which the pointer line already invokes;
   never restate it in the prompt.
