@@ -16,8 +16,9 @@ Code quickly and confidently, despite LLMs being LLMs:
 
 ## Patterns
 
-- LLM as judge: put a model on the review side too — a model checks a
-  model's work before I spend my own attention on it.
+- LLM as judge: LLMs are a little inaccurate; throwing another LLM at the
+  output pushes that inaccuracy down to even more negligible values. My
+  attention is spent side by side with the judge, not replaced by it.
 - Worktree parallelism: inference is slow, so many clankas run at once,
   each in its own disposable worktree. The tree is never the source of
   truth, so nuking one costs nothing.
