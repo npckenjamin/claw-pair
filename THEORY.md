@@ -17,30 +17,27 @@ Each flaw gets its own argument below. The claim is that the claw pair
 concept doesn't just patch each flaw; the same few mechanisms answer all
 three at once.
 
-## Flaw 1: prompting, and emergent intent
+## Flaw 1: prompting
 
-Agentic engineering is usually treated as translation: I know what I
-want, I write it down, the model does it. But intent doesn't exist upfront — it emerges
-while the code takes shape. So prompting is not translation, it is a
-loop: run, look, discover what I actually meant, run again.
+The prompt that reaches a clanka is the one with consequences — it is
+what actually shapes the codebase. The concept arranges for me to never
+write that prompt.
 
-That loop needs somewhere to store what it discovers. Storing it in the
-tree — patching the clanka's output — puts the discovery in a place that
-decays: per Naur, program text modified without the theory rots, and a
-patched tree is exactly that. Storing it in the master prompt puts the
-discovery where it regenerates: the next run is born already knowing it.
+LLMs are the best prompters, so the master prompt is written by one. My
+job is only to convey intent in conversation, and the claw pair is built
+for exactly that: its trajectory — the whole session of riffing — has
+attuned it to my lingo and my speaking style through in-context
+learning. I get to be a bad prompter; an expert writes the prompt.
 
-This is why the master prompt is one document that absorbs every
-discovery, and why the worktree gets nuked instead of fixed. The
-discipline is absolute — the moment I hand-fix a tree, the prompt stops
-being the full record of intent, and the next run silently loses what
-the fix knew.
+Intent itself is often wrong, and a lot of wrong intent is cheap to
+catch: it can be invalidated just by reading the codebase. The claw pair
+does that check before any code exists — an LLM that isn't writing the
+code, reading the code, telling me my intent doesn't survive contact.
+Wrong intent dies in the riff instead of in a run.
 
-The claw pair's role in this loop is early validation: intent gets
-pressure-tested in conversation before it costs a run. Riffing is cheap;
-runs are less cheap; shipped misunderstandings are expensive. The claw
-pair moves the discovery of "that's not what I meant" as far upstream as
-it can go.
+Downstream, review compounds this: I review with the same LLM that
+extracted my intent, thought through the decisions, and invalidated the
+wrong ones — so the review starts primed to be fruitful, not cold.
 
 ## Flaw 2: slow inference
 
