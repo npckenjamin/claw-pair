@@ -35,11 +35,10 @@ Code quickly and confidently, despite LLMs being LLMs:
   lossy — so you either give the LLM theory (google world models) or keep
   the human in the loop.
 - Feedback loopable
-  ([ampcode](https://ampcode.com/notes/feedback-loopable)): turn the
-  problem into a format the agent can understand and get it that data as
-  fast as possible — headless runners, URL-encoded repro cases, static
-  renders. A clanka that can check its own work needs no micromanaging;
-  a claim without an artifact is unchecked.
+  ([ampcode](https://ampcode.com/notes/feedback-loopable)): a clanka can
+  only fix what it can perceive, and it perceives in text. Making a
+  problem feedback loopable is translating the world of the problem into
+  a form the clanka can sense, as fast as possible.
 
 ## Concept
 
