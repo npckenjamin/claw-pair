@@ -1,0 +1,10 @@
+[tasks.install]
+description = "Symlink every skill into ~/.claude/skills"
+run = '''
+mkdir -p ~/.claude/skills
+for skill in skills/*/; do
+  name=$(basename "$skill")
+  ln -sfn "$PWD/skills/$name" ~/.claude/skills/"$name"
+  echo "linked ~/.claude/skills/$name"
+done
+'''
