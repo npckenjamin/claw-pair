@@ -22,8 +22,7 @@ Code quickly and confidently, despite LLMs being LLMs:
   each in its own disposable worktree. The tree is never the source of
   truth, so nuking one costs nothing.
 - Compound engineering: every run's learnings get encoded back into the
-  skills, so the next run starts smarter. Failed runs are the test suite
-  for the culture.
+  skills, so the next run starts smarter.
 - Programming as theory building
   ([Naur](https://pages.cs.wisc.edu/~remzi/Naur.pdf)): programming is not
   the production of a program — it is building a theory of how world
