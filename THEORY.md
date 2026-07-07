@@ -27,26 +27,20 @@ learning. I get to be a bad prompter; an expert writes the prompt.
 
 Intent itself is often wrong, and a lot of wrong intent is cheap to
 catch: it can be invalidated just by reading the codebase. The claw pair
-does that check before any code exists — an LLM that isn't writing the
-code, reading the code, telling me my intent doesn't survive contact.
-Wrong intent dies in the riff instead of in a run.
+does that check before any code exists.
+Clearly wrong intent dies in the riff instead of in a run.
 
-Downstream, review compounds this: I review with the same LLM that
-extracted my intent, thought through the decisions, and invalidated the
-wrong ones — so the review starts primed to be fruitful, not cold.
+Downstream benefit: I review with the same LLM that
+extracted my intent so the review starts primed to be fruitful.
 
 ## Flaw 2: slow inference
 
-Inference speed is not something we control, so the answer is to stop
-waiting on it. Clankas run in parallel worktrees; my time goes into the
-claw pair conversation, which overlaps with the runs instead of blocking
-on them.
+Inference speed is not something we control so clankas run in parallel worktrees;
 
 Nuke-and-rerun leans on the same fact from the other side: because the
 tree is never the source of truth, a worktree is free to destroy, and
-parallelism has no coordination cost. Nothing needs merging, syncing, or
-cherry-picking between trees — the prompt and the skills are the only
-shared state, and they live outside every tree.
+parallelism has no coordination cost. a worktree's output will always be
+an all or nothing commit so rebasing is cheap.
 
 ## Flaw 3: non-determinism
 
@@ -69,12 +63,7 @@ mid-implementation is.
 
 Every mechanism above produces learnings: a prompt phrasing that
 worked, a check clankas keep skipping, a register rule. Encoding them
-into the skills is what makes run N+1 cheaper than run N — the
-compound-engineering bet.
-
-The skills live in this repo, installed at the user level, so culture
-sits outside every product repo and every worktree. A fresh clanka is
-born with the current culture; nothing propagates, nothing drifts.
+into the skills is what makes run N+1 cheaper than run N.
 
 ## The meta feedback loop
 
