@@ -19,8 +19,8 @@ three at once.
 
 ## Flaw 1: prompting, and emergent intent
 
-Prompting is usually treated as translation: I know what I want, I write
-it down, the model does it. But intent doesn't exist upfront — it emerges
+Agentic engineering is usually treated as translation: I know what I
+want, I write it down, the model does it. But intent doesn't exist upfront — it emerges
 while the code takes shape. So prompting is not translation, it is a
 loop: run, look, discover what I actually meant, run again.
 
