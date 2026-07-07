@@ -1,8 +1,8 @@
 # Claw Pair
 
 (a play on *au pair*) — the skills that define how a thought-partner LLM
-and implementation agents work together, kept in one place instead of
-scattered across product repos.
+(claw pair) and implementation agents (clankas) work together, kept in one
+place instead of scattered across product repos.
 
 ## Job to be done
 
