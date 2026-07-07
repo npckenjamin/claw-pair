@@ -40,11 +40,14 @@ its place only as one of these:
   up").
 - **Requirement** — a constraint stated as an outcome ("must cover the
   outside pane"), never the mechanism; the clanka discovers the how.
-- **Evaluation instruction** — the observable checks by which the run is
-  judged, each written so an artifact can back it. The enforcement —
-  artifact rule, completion gating, validation entry point, report
-  shape — lives in the pair-implementing skill, which the pointer line
-  already invokes; never restate it in the prompt.
+- **Evaluation packet** — the observable checks by which the run is
+  judged, told to the clanka upfront, each written so an artifact can
+  back it. The clanka evaluates its own work against them, then
+  assembles the evidence into a packet — an HTML slide deck — that the
+  review works from. The enforcement — artifact rule, completion
+  gating, validation entry point, packet shape — lives in the
+  pair-implementing skill, which the pointer line already invokes;
+  never restate it in the prompt.
 
 Everything else — discoverable codebase facts, rename tables, variable
 naming, build mechanics the repo docs already carry — is noise; cut it.
