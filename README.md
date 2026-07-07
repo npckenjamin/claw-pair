@@ -8,8 +8,9 @@ place instead of scattered across product repos.
 
 Code quickly and confidently, despite LLMs being LLMs:
 
-- they need to be prompted, and prompting skills are poor (and intent is
-  figured out during the process of coding);
+- they need to be prompted, and prompting skills are poor — LLMs are the
+  best prompters (and intent is figured out during the process of
+  coding);
 - they run slowly, so they need to be parallelized;
 - they are non-deterministic, so their code needs to be reviewed — you
   can't completely trust-fall on the model.
