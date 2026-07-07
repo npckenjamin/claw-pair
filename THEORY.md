@@ -1,7 +1,6 @@
 # Theory
 
-Why we believe the claw pair concept solves the job to be done. The
-README states the concept; this is the argument for it.
+Why we believe the claw pair concept solves the job to be done.
 
 ## The job, restated
 
@@ -12,7 +11,7 @@ but three flaws stand between a raw model and confidence:
    process of coding — I don't fully know what I want until I see
    something;
 2. they run slowly;
-3. they are non-deterministic — I can't trust-fall on them.
+3. they are non-deterministic — their code needs to be reviewed.
 
 Each flaw gets its own argument below. The claim is that the claw pair
 concept doesn't just patch each flaw; the same few mechanisms answer all
