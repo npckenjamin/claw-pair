@@ -37,7 +37,7 @@ Code quickly and confidently, despite LLMs being LLMs:
   most powerful when they can validate their work against reality. When
   they have feedback loops.
 
-## Concept
+## The concept
 
 The claw pair: a thought-partner LLM that works with me to
 
