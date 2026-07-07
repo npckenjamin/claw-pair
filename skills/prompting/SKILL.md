@@ -29,6 +29,11 @@ effort, at `docs/plans/<effort>.md` unless the user says otherwise.
    Findings become edits to the master prompt or to the skills — never
    to the tree, which gets nuked. Back to 1 until a run is accepted.
 
+Skill edits (this skill, implementing) land in the claw-pair repo at
+`~/Main/Projects/claw-pair/skills` — the copies under `~/.claude/skills`
+are installed artifacts, never edited directly. Commit and push
+claw-pair, then reinstall with `npx skills update -g`.
+
 ## Prompt register
 
 The coding agent is intelligent and reads the codebase itself. A line

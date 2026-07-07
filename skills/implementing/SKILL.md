@@ -38,7 +38,8 @@ the run's only survivors.
 
 - **The deck** — an HTML slide deck at `.packet/index.html`, untracked,
   one slide per check: the check, its outcome, its evidence. The review
-  walks through it.
+  walks through it. A check's caveats live on its slide, never deferred
+  to the report — the deck must stand alone.
 - **The report** — your final message. It carries every discovery,
   deviation, premise break, and side effect beyond the diff — data
   seeded, deployments touched, helpers shipped. Text, because it gets
