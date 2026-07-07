@@ -9,9 +9,7 @@ disable-model-invocation: true
 Pair programming where the deliverable is the master prompt: the one
 markdown document per effort that a fresh coding agent executes from a
 clean worktree. It lives at `docs/plans/<effort>.md` unless the user says
-otherwise, named for the effort — no dates, no take letters: the
-accepted run's single commit includes the prompt, so git history
-attributes each prompt to the change it drove.
+otherwise.
 
 The master prompt and the skills are the only things this session
 changes — never product code.
