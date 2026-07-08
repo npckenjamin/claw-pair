@@ -46,7 +46,9 @@ earns its place only as one of these:
 - **Requirement** — a constraint stated as an outcome ("must cover the
   outside pane"), never the mechanism; the agent discovers the how.
 - **Evaluation packet** — the observable checks by which the run is
-  judged, each written so an artifact can back it. The enforcement —
+  judged, each written so an artifact can back it. An invariant
+  requirement ("always", "never") gets a check that sweeps every state
+  it spans — one state proves nothing about "always". The enforcement —
   artifact rule, completion gating, validation entry point, deck and
   report shape — lives in the implementing skill, which the pointer
   line already invokes; never restate it in the prompt.

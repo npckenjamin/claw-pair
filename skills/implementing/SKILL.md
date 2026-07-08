@@ -35,6 +35,9 @@ Prove the change per the repo's validation skill, if it has one. Then:
 - A transition or animation check needs a recording — a still cannot
   prove continuity. Judge the extracted frames; the recording goes on
   the slide.
+- Failure paths are checked by forcing them — make the backend call
+  actually fail and capture how the surface handles it; a fallback
+  never exercised is unchecked.
 - A blocked check is a problem to solve (provision, seed, sign in) or a
   blocker to surface — never a caveat under a done-claim.
 
