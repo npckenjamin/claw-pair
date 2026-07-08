@@ -27,7 +27,11 @@ effort, at `docs/plans/<effort>.md` unless the user says otherwise.
    is input to the next revision.
 4. **Riff on the run** — review the report and the output together.
    Findings become edits to the master prompt or to the skills — never
-   to the tree, which gets nuked. Back to 1 until a run is accepted.
+   to the tree, which gets nuked. Reviewing is riffing, not revising:
+   answer the question asked, diagnose, and settle the finding in
+   conversation. The document is only touched back in step 2, after the
+   riff settles it — never mid-review. Back to 1 until a run is
+   accepted.
 
 Skill edits (this skill, implementing) land in the claw-pair repo at
 `~/Main/Projects/claw-pair/skills` — the copies under `~/.claude/skills`
