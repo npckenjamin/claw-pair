@@ -20,6 +20,10 @@ effort, at `docs/plans/<effort>.md` unless the user says otherwise.
    When the effort adds a dimension — a new filter, mode, or source of
    state — walk the existing state-dependent surfaces it multiplies
    (empty states, copy, transitions) and settle what each shows now.
+   A Figma frame screenshot shows one viewport: scrollable content
+   below the fold is clipped or faded out of it. Enumerate the frame's
+   full node tree (get_metadata) before treating any screenshot as the
+   whole design, and riff on every section it lists.
 2. **Revise the master prompt** — draft in chat first if the shape is
    still contested, otherwise write it. The one document absorbs every
    settled decision; it opens with its pointer line —
