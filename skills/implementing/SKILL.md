@@ -28,6 +28,13 @@ Prove the change per the repo's validation skill, if it has one. Then:
 - Every check in the prompt's evaluation packet needs its artifact —
   screenshot, UI snapshot, command output. A claim without an artifact
   is unchecked.
+- A visual check is judged side-by-side: its slide shows the capture
+  beside the reference image. A match graded from memory is unchecked.
+- UI captures come in both light and dark; one appearance is half an
+  artifact.
+- A transition or animation check needs a recording — a still cannot
+  prove continuity. Judge the extracted frames; the recording goes on
+  the slide.
 - A blocked check is a problem to solve (provision, seed, sign in) or a
   blocker to surface — never a caveat under a done-claim.
 
