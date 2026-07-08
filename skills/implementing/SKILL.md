@@ -21,6 +21,12 @@ up your side.
   disproves — does not void the requirement: pursue the stated outcome
   by whatever mechanism is actually true, and report the break.
 
+## The code
+
+Before writing it, look for the repo's skills on coding practice —
+writing good code, commenting, decomposition — and hold the change to
+what you find. A repo pointer unfollowed is a lesson unlearned.
+
 ## Checks gate completion
 
 Prove the change per the repo's validation skill, if it has one. Then:
