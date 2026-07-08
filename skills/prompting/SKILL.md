@@ -49,10 +49,16 @@ earns its place only as one of these:
   up").
 - **Requirement** — a constraint stated as an outcome ("must cover the
   outside pane"), never the mechanism; the agent discovers the how.
+  Preservation is an outcome too: "must survive" or "keeps working"
+  names what unchanged looks like — placement, behavior — never bare
+  existence, which is the weakest reading and the one the agent will
+  satisfy.
 - **Evaluation packet** — the observable checks by which the run is
   judged, each written so an artifact can back it. An invariant
   requirement ("always", "never") gets a check that sweeps every state
-  it spans — one state proves nothing about "always". The enforcement —
+  it spans — one state proves nothing about "always". A preservation
+  requirement gets a check a degraded version would fail — "still
+  appears" proves existence, not sameness. The enforcement —
   artifact rule, completion gating, validation entry point, deck and
   report shape — lives in the implementing skill, which the pointer
   line already invokes; never restate it in the prompt.
