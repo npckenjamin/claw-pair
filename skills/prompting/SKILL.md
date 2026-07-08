@@ -17,6 +17,9 @@ effort, at `docs/plans/<effort>.md` unless the user says otherwise.
 1. **Riff** — discuss the effort until its decisions are settled,
    grounded in the actual code. Read the codebase to invalidate intent
    here, in conversation, where it is cheap — before it costs a run.
+   When the effort adds a dimension — a new filter, mode, or source of
+   state — walk the existing state-dependent surfaces it multiplies
+   (empty states, copy, transitions) and settle what each shows now.
 2. **Revise the master prompt** — draft in chat first if the shape is
    still contested, otherwise write it. The one document absorbs every
    settled decision; it opens with its pointer line —
@@ -56,9 +59,13 @@ earns its place only as one of these:
 - **Evaluation packet** — the observable checks by which the run is
   judged, each written so an artifact can back it. An invariant
   requirement ("always", "never") gets a check that sweeps every state
-  it spans — one state proves nothing about "always". A preservation
-  requirement gets a check a degraded version would fail — "still
-  appears" proves existence, not sameness. The enforcement —
+  it spans — one state proves nothing about "always", and transient
+  states count: loading and mid-transition are states, not gaps between
+  them. A preservation requirement gets a check a degraded version
+  would fail — "still appears" proves existence, not sameness. A
+  visual-match check names its frame and is judged by side-by-side
+  comparison; never itemize what "matches" means, because the list
+  reads as exhaustive and drops what memory dropped. The enforcement —
   artifact rule, completion gating, validation entry point, deck and
   report shape — lives in the implementing skill, which the pointer
   line already invokes; never restate it in the prompt.
